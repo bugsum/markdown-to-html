@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown to HTML Generator</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Markdown to HTML Generator</h1>
+    </header>
+
+    <main>
+      <section class="editor">
+        <h2 style="padding-bottom: 8px">Editor</h2>
+        <textarea
+          id="markdownEditor"
+          placeholder="Write your markdown here..."
+          oninput="updatePreview()"
+        ></textarea>
+      </section>
+
+      <section class="output">
+        <h2 style="padding-bottom: 8px">Preview</h2>
+        <div id="htmlPreview" class="preview"></div>
+      </section>
+
+      <section class="controls">
+        <button id="downloadBtn" onclick="downloadHTML()">Download HTML</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with love and simplicity.</p>
+    </footer>
+
+    <script src="/scripts/script.js"></script>
+    <script src="/libs/purify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </body>
+</html>
